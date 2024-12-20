@@ -1,0 +1,27 @@
+type TransferResult = variant {
+    ok: record {};  // Empty record for success (equivalent to `()`)
+    err: text;      // Error message for failure
+};
+
+service : {
+    // Query the balance of a specific user
+    get_balance: (principal) -> ();  // Use `int` for balance
+
+    // Query the total supply of tokens
+    total_supply: () -> ();  // Use `int` for total supply
+
+    // Query the name of the token
+    name: () -> ();
+
+    // Query the symbol of the token
+    symbol: () -> ();
+
+    // Query the decimal precision of the token
+    decimals: () -> ();
+
+    // Transfer tokens from the caller to a recipient
+    transfer: (principal, int) -> ();  // Use `int` for balance transfer
+
+    // Mint new tokens, only callable by the admin
+    mint: (int) -> ();  // Use `int` for minting balance
+};

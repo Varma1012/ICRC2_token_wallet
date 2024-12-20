@@ -1,0 +1,14 @@
+[
+  {
+    "match": "index.html",
+    "cache": { "max-age": 31536000 }
+  },
+  {
+    "match": "style.css",
+    "cache": { "max-age": 31536000 }
+  },
+  {
+    "match": "app.js",
+    "cache": { "max-age": 31536000 }
+  }
+]

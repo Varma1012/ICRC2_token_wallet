@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Token Wallet</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@dfinity/agent@0.11.0/dist/index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@dfinity/candid@0.9.1/dist/index.js"></script>
+    <script src="app.js" defer></script>
+</head>
+<body>
+    <h1>Token Wallet Interface</h1>
+
+    <!-- Get Balance -->
+    <div class="form-group">
+        <label for="owner">Enter Principal ID to Get Balance:</label>
+        <input type="text" id="owner" placeholder="Enter your Principal ID" />
+    </div>
+    <button onclick="getBalance()">Get Balance</button>
+    <div class="result" id="balanceResult"></div>
+
+    <!-- Get Total Supply -->
+    <button onclick="getTotalSupply()">Get Total Supply</button>
+    <div class="result" id="totalSupplyResult"></div>
+
+    <!-- Get Token Name -->
+    <button onclick="getName()">Get Token Name</button>
+    <div class="result" id="nameResult"></div>
+
+    <!-- Get Token Symbol -->
+    <button onclick="getSymbol()">Get Token Symbol</button>
+    <div class="result" id="symbolResult"></div>
+
+    <!-- Get Token Decimals -->
+    <button onclick="getDecimals()">Get Token Decimals</button>
+    <div class="result" id="decimalsResult"></div>
+
+    <!-- Transfer Tokens -->
+    <h3>Transfer Tokens</h3>
+    <div class="form-group">
+        <label for="toPrincipal">Recipient Principal ID:</label>
+        <input type="text" id="toPrincipal" placeholder="Recipient's Principal ID" />
+    </div>
+    <div class="form-group">
+        <label for="amount">Amount to Transfer:</label>
+        <input type="number" id="amount" placeholder="Amount" />
+    </div>
+    <button onclick="transferTokens()">Transfer Tokens</button>
+    <div class="result" id="transferResult"></div>
+
+    <!-- Mint Tokens -->
+    <h3>Mint Tokens</h3>
+    <div class="form-group">
+        <label for="mintAmount">Amount to Mint:</label>
+        <input type="number" id="mintAmount" placeholder="Amount to Mint" />
+    </div>
+    <button onclick="mintTokens()">Mint Tokens</button>
+    <div class="result" id="mintResult"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@dfinity/agent/dist/dfinity-agent.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

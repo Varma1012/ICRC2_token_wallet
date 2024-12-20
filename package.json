@@ -1,0 +1,36 @@
+{
+  "name": "token_wallet",
+  "type": "module",
+  "scripts": {
+    "start": "npm start --workspaces --if-present",
+    "prebuild": "npm run prebuild --workspaces --if-present",
+    "build": "npm run build --workspaces --if-present",
+    "pretest": "npm run prebuild --workspaces --if-present",
+    "test": "npm test --workspaces --if-present",
+    "deploy": "dfx deploy",
+    "start:frontend": "cd frontend && npm start",
+    "start:backend": "cd token_wallet_backend && npm start"
+  },
+  "engines": {
+    "node": ">=16.0.0",
+    "npm": ">=7.0.0"
+  },
+  "workspaces": [
+    "frontend",
+    "token_wallet_backend"
+  ],
+  "description": "Welcome to your new `token_wallet` project and to the Internet Computer development community. By default, creating a new project adds this README and some template files to your project directory. You can edit these template files to customize your project and to include your own code to speed up the development cycle.",
+  "version": "1.0.0",
+  "main": "index.html",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@dfinity/agent": "^2.2.0",
+    "@dfinity/candid": "^2.2.0",
+    "@dfinity/principal": "^2.2.0"
+  },
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  }
+}

@@ -1,0 +1,19 @@
+[package]
+name = "token_wallet"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+ic-cdk = "0.17.0"  # Adjust the version based on the latest compatible release
+ic-cdk-macros = "0.17.0"  # Adjust the version as per the compatible ic-cdk version
+candid = "0.10.4"  # For serializing Candid types
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"  # For working with JSON serialization
+lazy_static = "1.4"  # For using static variables in Rust (optional)
+
+[lib]
+path = "src/token_wallet_backend/lib.rs"
+crate-type = ["cdylib"]
+
+[profile.release]
+panic = "abort"  # To reduce the size of the WebAssembly module in release builds

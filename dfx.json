@@ -1,0 +1,30 @@
+{
+  "canisters": {
+    "token_wallet_backend": {
+      "main":"src/token_wallet_backend/lib.rs",
+      "candid": "src/token_wallet_backend/token_wallet_backend.did",
+      "package":"token_wallet", 
+      "type": "rust",
+      "default_memory": "256MiB",
+      "default_compilation_mode": "release"
+    },
+    "frontend": {
+      "dependencies": [
+        "token_wallet_backend"
+      ],
+      "type": "assets",
+    "source": [
+        "frontend/assets"
+      ]
+      
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
