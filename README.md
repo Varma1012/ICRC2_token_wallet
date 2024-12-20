@@ -78,3 +78,4 @@ This project implements a basic fungible token wallet on the Internet Computer (
 - **DFINITY SDK**: Make sure you have the DFINITY SDK installed to deploy this canister.
 - **Plug Wallet**: A browser extension for interacting with the Internet Computer canisters.
 
+"# ICRC2_token_wallet" 
